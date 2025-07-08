@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Team</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <img src="assets/logo.png" class="logo" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="staking.html">Staking</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+      </ul>
+    </nav>
+    <button id="connectWalletBtn" class="wallet-connect-btn">Connect Wallet</button>
+  </header>
+
+  <main>
+    <section class="content-section">
+      <h2>Your Team</h2>
+      <div class="card">
+        <p>Total Team Members: <span id="totalTeam">0</span></p>
+        <p>Total Team Stake: <span id="teamStake">0</span></p>
+      </div>
+      <div id="teamLevels" class="cards-container">
+        <!-- Dynamic Level Cards -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 VNST Staking DApp</p>
+  </footer>
+</body>
+</html>
