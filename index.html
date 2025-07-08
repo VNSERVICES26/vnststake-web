@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VNST Staking - Home</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNST Staking DApp</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
-    <img src="assets/logo.png" class="logo" alt="Logo">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -20,34 +19,32 @@
     <button id="connectWalletBtn" class="wallet-connect-btn">Connect Wallet</button>
   </header>
 
-  <main>
-    <section class="content-section">
-      <h2>Staking Summary</h2>
-      <div class="cards-container">
-        <div class="card">
-          <h3>Total Stakers</h3>
-          <p id="totalStakers">0</p>
-        </div>
-        <div class="card">
-          <h3>Total Staked VNST</h3>
-          <p id="totalStaked">0</p>
-        </div>
-        <div class="card">
-          <h3>Total Withdrawn</h3>
-          <p id="totalWithdrawn">0</p>
-        </div>
-        <div class="card">
-          <h3>Active Stake</h3>
-          <p id="totalActive">0</p>
-        </div>
+  <main class="content-section">
+    <h2>Dashboard Overview</h2>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Total Users</h3>
+        <p id="totalUsers">0</p>
       </div>
-    </section>
+      <div class="card">
+        <h3>Total Staked VNST</h3>
+        <p id="totalStaked">0</p>
+      </div>
+      <div class="card">
+        <h3>Total Withdrawn</h3>
+        <p id="totalWithdrawn">0</p>
+      </div>
+      <div class="card">
+        <h3>Active Stakes</h3>
+        <p id="activeStakes">0</p>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 VNST Staking DApp</p>
+    <p>&copy; 2025 VNST Staking Platform</p>
   </footer>
 
-  <script defer src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
