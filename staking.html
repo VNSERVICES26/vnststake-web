@@ -1,68 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VNST Staking</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNST Staking</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="navbar">
-    <img src="assets/logo.png" class="logo" alt="Logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="staking.html" class="active">Staking</a></li>
-        <li><a href="team.html">Team</a></li>
-      </ul>
-    </nav>
-    <button id="connectWalletBtn" class="wallet-connect-btn">Connect Wallet</button>
-  </header>
+    <header class="navbar">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="staking.html">Staking</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+        <button class="wallet-connect-btn" id="walletBtn">Connect Wallet</button>
+    </header>
 
-  <main>
-    <section class="content-section">
-      <h2>Stake Your VNST</h2>
-      <div class="card">
-        <p>Your Wallet: <span id="userAddress">-</span></p>
-        <p>Your VNST Balance: <span id="vnstBalance">0</span></p>
-        <p>Min Stake: <span id="minStake">0</span></p>
-        <p>Max Stake: <span id="maxStake">0</span></p>
-        <input type="text" id="referralAddress" placeholder="Referral Address">
-        <input type="number" id="stakeAmount" placeholder="Enter amount to stake">
-        <button id="approveMaxBtn" class="btn">Approve Max</button>
-        <button id="stakeBtn" class="btn">Stake</button>
-        <p>Your Referral Link: <span id="referralLink">-</span></p>
-        <button onclick="copyReferralLink()" class="btn">Copy Referral Link</button>
-      </div>
+    <main class="content-section">
+        <h2>Stake Your VNST</h2>
 
-      <div class="cards-container">
         <div class="card">
-          <h3>Your Directs</h3>
-          <p id="directCount">0</p>
-        </div>
-        <div class="card">
-          <h3>Your Active Stake</h3>
-          <p id="activeStake">0</p>
-        </div>
-        <div class="card">
-          <h3>Your VNT Reward</h3>
-          <p id="vntReward">0</p>
-          <button id="claimTokenBtn" class="btn">Claim Token</button>
-        </div>
-        <div class="card">
-          <h3>Your USDT Reward</h3>
-          <p id="usdtReward">0</p>
-          <button id="claimUsdtBtn" class="btn">Claim USDT</button>
-        </div>
-      </div>
-    </section>
-  </main>
+            <p><strong>Wallet Address:</strong> <span id="userWallet">-</span></p>
+            <p><strong>VNST Balance:</strong> <span id="vnstBalance">0</span></p>
 
-  <footer>
-    <p>&copy; 2025 VNST Staking DApp</p>
-  </footer>
+            <input type="text" id="referralInput" placeholder="Enter Referral Address">
 
-  <script defer src="script.js"></script>
+            <p><strong>Min Stake:</strong> <span id="minStake">100</span> VNST</p>
+            <p><strong>Max Stake:</strong> <span id="maxStake">10000</span> VNST</p>
+
+            <input type="number" id="stakeAmount" placeholder="Enter amount to stake">
+
+            <button class="btn" id="approveMaxBtn">Approve Max</button>
+            <button class="btn" id="stakeBtn">Stake</button>
+
+            <hr>
+
+            <p><strong>My Direct Referrals:</strong> <span id="directReferrals">0</span></p>
+            <p><strong>My Active Stake:</strong> <span id="myActiveStake">0</span> VNST</p>
+
+            <p><strong>Token Reward:</strong> <span id="vntReward">0</span> VNT</p>
+            <button class="btn" id="claimTokenBtn">Claim VNT</button>
+
+            <p><strong>USDT Reward:</strong> <span id="usdtReward">0</span> USDT</p>
+            <button class="btn" id="claimUsdtBtn">Claim USDT</button>
+
+            <div style="margin-top: 1rem">
+                <p><strong>Your Referral Link:</strong></p>
+                <input type="text" id="referralLink" readonly style="margin-bottom: 0.5rem;">
+                <button class="btn" onclick="copyReferralLink()">Copy Referral Link</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 VNST Staking. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
