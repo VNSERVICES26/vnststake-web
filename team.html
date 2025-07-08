@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Team</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team | VNST Staking</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
+
 <body>
   <header class="navbar">
-    <img src="assets/logo.png" class="logo" alt="Logo">
+    <img src="assets/logo.png" alt="VNST Logo" class="logo" />
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -22,21 +24,37 @@
 
   <main>
     <section class="content-section">
-      <h2>Your Team</h2>
+      <h2>Referral Team Overview</h2>
+
       <div class="card">
-        <p>Total Team Members: <span id="totalTeam">0</span></p>
-        <p>Total Team Stake: <span id="teamStake">0</span></p>
+        <h3>Direct Members</h3>
+        <ul id="directMembersList">
+          <!-- Direct members will be injected here -->
+        </ul>
       </div>
-      <div id="teamLevels" class="cards-container">
-        <!-- Dynamic Level Cards -->
+
+      <div class="card">
+        <h3>Total Team</h3>
+        <p id="totalTeamCount">Loading...</p>
+        <p id="totalTeamStake">Total Team Stake: 0 VNST</p>
+      </div>
+
+      <div class="card">
+        <h3>Levels</h3>
+        <div id="levelsContainer">
+          <!-- Levels will be rendered dynamically -->
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 VNST Staking DApp</p>
+    <p>&copy; 2025 VNST Staking Platform. All rights reserved.</p>
   </footer>
 
-  <script defer src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.8/dist/umd/index.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
